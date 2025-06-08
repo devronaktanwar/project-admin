@@ -14,7 +14,7 @@ import { Input } from "./ui/input";
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
 // import { toast } from "sonner";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 const Login = () => {
   // const [loading, setLoading] = useState(false);
   // const router = useRouter();
@@ -78,7 +78,7 @@ const Login = () => {
             // disabled={loading}
           >
             {/* {loading ? "Signing in..." : "Sign in"} */}
-            "Login"
+            Login
           </Button>
           <p className="text-xs text-gray-600">OR</p>
           <Button
