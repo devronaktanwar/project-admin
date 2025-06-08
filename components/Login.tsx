@@ -19,7 +19,7 @@ const Login = () => {
   // const [loading, setLoading] = useState(false);
   // const router = useRouter();
   const [formData, setFormData] = useState({ emailAddress: "", password: "" });
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // try {
     //   setLoading(true);
