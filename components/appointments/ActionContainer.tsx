@@ -1,5 +1,5 @@
 "use client";
-import { FilePlus, Search } from "lucide-react";
+import { FilePlus } from "lucide-react";
 import React, { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { Button } from "../ui/button";

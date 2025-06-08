@@ -14,7 +14,6 @@ import {
   CalendarDays,
   Stethoscope,
   Users,
-  Clock,
   Receipt,
   BarChart,
   Bell,

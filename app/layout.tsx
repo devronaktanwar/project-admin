@@ -1,4 +1,3 @@
-import AppSidebar from "@/components/AppSidebar";
 import "./globals.css";
 import type { Metadata } from "next";
 

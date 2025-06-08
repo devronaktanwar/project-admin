@@ -1,7 +1,6 @@
 import AppSidebar from "@/components/AppSidebar";
 import "../globals.css";
 import {
-  SidebarInset,
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";

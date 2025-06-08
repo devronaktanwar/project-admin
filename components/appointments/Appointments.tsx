@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { BiFilterAlt } from "react-icons/bi";
 import Listing from "./Listing";
 import ActionContainer from "./ActionContainer";

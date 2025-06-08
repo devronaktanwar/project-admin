@@ -13,11 +13,11 @@ import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
-import { toast } from "sonner";
+// import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 const Login = () => {
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
+  // const [loading, setLoading] = useState(false);
+  // const router = useRouter();
   const [formData, setFormData] = useState({ emailAddress: "", password: "" });
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -75,9 +75,10 @@ const Login = () => {
           <Button
             type="submit"
             className="w-full cursor-pointer"
-            disabled={loading}
+            // disabled={loading}
           >
-            {loading ? "Signing in..." : "Sign in"}
+            {/* {loading ? "Signing in..." : "Sign in"} */}
+            "Login"
           </Button>
           <p className="text-xs text-gray-600">OR</p>
           <Button
@@ -88,7 +89,7 @@ const Login = () => {
             Continue with <FaGoogle />
           </Button>
           <div className="flex items-center text-sm gap-1">
-            <p className="text-gray-600">Don't have an account?</p>
+            <p className="text-gray-600">Dont have an account?</p>
             <Link
               href={"/register"}
               className="hover:underline font-medium"
