@@ -19,7 +19,7 @@ const Appointments = () => {
           </p>
         </div>
         <ActionContainer />
-        <div className="flex flex-col gap-6 border rounded p-4">
+        <div className="flex flex-col gap-6 border rounded-md px-6 py-4 bg-white">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-y-4">
             <div className="space-y-2">
               <h3 className="md:text-2xl font-semibold">All Appointments</h3>

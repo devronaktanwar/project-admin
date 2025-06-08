@@ -18,33 +18,37 @@ const Listing = () => {
         <TableHeader>
           <TableRow>
             {tableHeaders.map((header, index) => (
-              <TableHead key={index} className="text-description text-base">{header}</TableHead>
+              <TableHead key={index} className="text-description text-base">
+                {header}
+              </TableHead>
             ))}
           </TableRow>
         </TableHeader>
         <TableBody className="font-medium">
           {appointmentData.map((appointment) => (
-            <TableRow key={appointment.id}>
+            <TableRow key={appointment.email}>
               <TableCell className="flex items-center gap-3 py-6 md:text-base">
                 <div className="border h-8 w-8 md:h-10 md:w-10 rounded-full flex justify-center items-center font-semibold md:text-lg bg-primary-light">
-                    {appointment.patient.charAt(0)}
+                  {appointment.name.charAt(0)}
                 </div>
-                <h2>{appointment.patient}</h2>
+                <h2>{appointment.name}</h2>
               </TableCell>
-              <TableCell>{appointment.doctor}</TableCell>
               <TableCell>{appointment.dateTime}</TableCell>
-              <TableCell>{appointment.status}</TableCell>
-              <TableCell>{appointment.type}</TableCell>
-              <TableCell>{appointment.duration}</TableCell>
+              <TableCell>{appointment.email}</TableCell>
+              <TableCell>{appointment.contact}</TableCell>
+              <TableCell>{appointment.age}</TableCell>
               <TableCell>
-              <Popover>
+                <Popover>
                   <PopoverTrigger asChild>
-                  <div className="text-lg border w-fit p-1 rounded">
-                <IoMdMore className="rotate-90"/>
-                </div>                 
-                 </PopoverTrigger>
-                  <PopoverContent align="end" className="w-56 !p-2 text-description font-medium">
-                    <ActionCard/>
+                    <div className="text-lg border w-fit p-1 rounded">
+                      <IoMdMore className="rotate-90" />
+                    </div>
+                  </PopoverTrigger>
+                  <PopoverContent
+                    align="end"
+                    className="w-56 !p-2 text-description font-medium"
+                  >
+                    <ActionCard />
                   </PopoverContent>
                 </Popover>
               </TableCell>
@@ -59,121 +63,82 @@ const Listing = () => {
 export default Listing;
 const appointmentData = [
   {
-    id: 1,
-    patient: "John Doe",
-    doctor: "Dr. Smith",
-    dateTime: "2025-06-10 10:00 AM",
-    status: "Confirmed",
-    type: "Online",
-    duration: "30 mins",
+    name: "Riya Sharma",
+    dateTime: "2025-06-08T10:30:00",
+    email: "riya.sharma@example.com",
+    contact: "+91 9876543210",
+    age: 27,
   },
   {
-    id: 2,
-    patient: "Alice Johnson",
-    doctor: "Dr. Brown",
-    dateTime: "2025-06-11 2:30 PM",
-    status: "Pending",
-    type: "In-Person",
-    duration: "45 mins",
+    name: "Aarav Mehta",
+    dateTime: "2025-06-08T11:00:00",
+    email: "aarav.mehta@example.com",
+    contact: "+91 9123456780",
+    age: 31,
   },
   {
-    id: 3,
-    patient: "Michael Green",
-    doctor: "Dr. Patel",
-    dateTime: "2025-06-12 9:00 AM",
-    status: "Cancelled",
-    type: "Online",
-    duration: "15 mins",
+    name: "Sneha Patel",
+    dateTime: "2025-06-08T11:45:00",
+    email: "sneha.patel@example.com",
+    contact: "+91 9988776655",
+    age: 24,
   },
   {
-    id: 4,
-    patient: "Michael Green",
-    doctor: "Dr. Patel",
-    dateTime: "2025-06-12 9:00 AM",
-    status: "Cancelled",
-    type: "Online",
-    duration: "15 mins",
+    name: "Karan Verma",
+    dateTime: "2025-06-08T12:15:00",
+    email: "karan.verma@example.com",
+    contact: "+91 9345678123",
+    age: 35,
   },
   {
-    id: 5,
-    patient: "Michael Green",
-    doctor: "Dr. Patel",
-    dateTime: "2025-06-12 9:00 AM",
-    status: "Cancelled",
-    type: "Online",
-    duration: "15 mins",
+    name: "Ishita Desai",
+    dateTime: "2025-06-08T13:00:00",
+    email: "ishita.desai@example.com",
+    contact: "+91 9001234567",
+    age: 29,
   },
   {
-    id: 6,
-    patient: "Michael Green",
-    doctor: "Dr. Patel",
-    dateTime: "2025-06-12 9:00 AM",
-    status: "Cancelled",
-    type: "Online",
-    duration: "15 mins",
+    name: "Rahul Kapoor",
+    dateTime: "2025-06-08T13:30:00",
+    email: "rahul.kapoor@example.com",
+    contact: "+91 9812345678",
+    age: 38,
   },
   {
-    id: 7,
-    patient: "Michael Green",
-    doctor: "Dr. Patel",
-    dateTime: "2025-06-12 9:00 AM",
-    status: "Cancelled",
-    type: "Online",
-    duration: "15 mins",
+    name: "Meera Joshi",
+    dateTime: "2025-06-08T14:00:00",
+    email: "meera.joshi@example.com",
+    contact: "+91 9898989898",
+    age: 26,
   },
   {
-    id: 8,
-    patient: "Michael Green",
-    doctor: "Dr. Patel",
-    dateTime: "2025-06-12 9:00 AM",
-    status: "Cancelled",
-    type: "Online",
-    duration: "15 mins",
+    name: "Devansh Thakur",
+    dateTime: "2025-06-08T14:30:00",
+    email: "devansh.thakur@example.com",
+    contact: "+91 9765432109",
+    age: 33,
   },
   {
-    id: 9,
-    patient: "Michael Green",
-    doctor: "Dr. Patel",
-    dateTime: "2025-06-12 9:00 AM",
-    status: "Cancelled",
-    type: "Online",
-    duration: "15 mins",
+    name: "Tanya Nair",
+    dateTime: "2025-06-08T15:00:00",
+    email: "tanya.nair@example.com",
+    contact: "+91 9090909090",
+    age: 22,
   },
   {
-    id: 10,
-    patient: "Michael Green",
-    doctor: "Dr. Patel",
-    dateTime: "2025-06-12 9:00 AM",
-    status: "Cancelled",
-    type: "Online",
-    duration: "15 mins",
-  },
-  {
-    id: 11,
-    patient: "Michael Green",
-    doctor: "Dr. Patel",
-    dateTime: "2025-06-12 9:00 AM",
-    status: "Cancelled",
-    type: "Online",
-    duration: "15 mins",
-  },
-  {
-    id: 12,
-    patient: "Michael Green",
-    doctor: "Dr. Patel",
-    dateTime: "2025-06-12 9:00 AM",
-    status: "Cancelled",
-    type: "Online",
-    duration: "15 mins",
+    name: "Rohit Bansal",
+    dateTime: "2025-06-08T15:30:00",
+    email: "rohit.bansal@example.com",
+    contact: "+91 9887766554",
+    age: 40,
   },
 ];
 
 const tableHeaders = [
-  "Patient",
-  "Doctor",
+  "Name",
   "Date & Time",
-  "Status",
-  "Type",
-  "Duration",
+  "Email",
+  "Contact",
+  "Age",
   "Actions",
 ];

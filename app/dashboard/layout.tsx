@@ -25,7 +25,7 @@ export default function RootLayout({
               <div className="flex-1 px-4 md:px-6 py-3">
                 <SidebarTrigger />
               </div>
-              <div className="w-full p-4 md:p-6">{children}</div>
+              <div className="w-full p-4 md:p-6 bg-[#f5f5f5]">{children}</div>
    
             </main>
         </SidebarProvider>
