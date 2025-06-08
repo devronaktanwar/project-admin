@@ -20,7 +20,7 @@ const Register = () => {
   // const [loading, setLoading] = useState(false);
   // const router = useRouter();
   const [formData, setFormData] = useState({ emailAddress: "", password: "" });
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // try {
     //   setLoading(true);
